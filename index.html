@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jakaria Hasan | Portfolio</title>
+    <meta name="description" content="Modern, dynamic, lightweight personal portfolio website." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-grid"></div>
+
+    <header class="site-header" id="top">
+        <nav class="navbar container">
+            <a href="#home" class="logo logo-advanced">
+                <span class="logo-wrap">
+                    <img src="logo_jh.png" alt="Jakaria logo" class="logo-img" />
+                    <span class="logo-ring"></span>
+                    <span class="logo-ring ring-2"></span>
+                    <span class="logo-pulse"></span>
+                </span>
+                <span class="logo-text">Jakaria</span>
+            </a>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+                    <span class="theme-icon sun">☀</span>
+                    <span class="theme-icon moon">☾</span>
+                </button>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#works" class="nav-link">Works</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <a href="cv_jakaria.pdf" download class="nav-link"> ⬇ Download CV
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero section" id="home">
+            <div class="container hero-grid">
+                <div class="hero-content reveal">
+                    <p class="eyebrow">Personal Portfolio</p>
+                    <h1>
+                        Hi, I'm
+                        <span class="gradient-text">Jakaria Hasan</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        CSE Student • Web Designer • Future Software & AI Developer
+                    </h2>
+                    <p class="hero-text">
+                        I create modern, high-performance web experiences that combine clean design,
+                        smooth interactions, and real-world usability. As a CSE student, I am continuously
+                        learning software development and AI to build intelligent and impactful digital products.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#works" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                        <a href="cv_jakaria.pdf" download class="btn btn-secondary"> ⬇ Download CV </a>
+                    </div>
+
+                    <div class="hero-meta">
+                        <a href="mailto:sksjakaria@gmail.com" class="meta-chip">
+                            ✉ sksjakaria@gmail.com
+                        </a>
+                        <span class="meta-chip"> ☎ 01306-060688</span>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal delay-1">
+                    <div class="glass-card hero-card interactive-card" id="heroCard">
+                        <div class="hero-card-top">
+                            <span></span><span></span><span></span>
+                        </div>
+
+                        <div class="hero-badge">Open to Learning & Opportunities</div>
+
+                        <div class="hero-card-content">
+                            <div class="avatar-ring">
+                                <img src="jakaria_img.jpeg" alt="Jakaria Hasan" class="avatar-img" />
+                            </div>
+
+                            <div>
+                                <h3 class="typing-title">
+                                    <span id="typedTitle"></span><span class="cursor">|</span>
+                                </h3>
+
+                                <p class="rotating-line">
+                                    <span>I’m a </span>
+                                    <span class="rotating-text" id="rotatingText">Web Designer</span>
+                                </p>
+
+                                <p>
+                                <p>
+                                    I create modern, responsive, and visually refined web experiences while
+                                    continuously building my skills in software development and AI.
+                                </p>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mini-stats">
+                            <div class="mini-stat">
+                                <strong>Web Design</strong>
+                                <span>Intermediate Level</span>
+                            </div>
+
+                            <div class="mini-stat">
+                                <strong>Learning</strong>
+                                <span> Software Development, Machine Learning and AI</span>
+                            </div>
+
+                            <div class="mini-stat">
+                                <strong>Focus</strong>
+                                <span>Modern UI & UX</span>
+                            </div>
+                        </div>
+
+                        <div class="github-stats glass-subcard">
+                            <h4>GitHub Snapshot</h4>
+
+                            <div class="github-grid">
+                                <img src="https://img.shields.io/github/followers/jakariasks?style=for-the-badge&logo=github"
+                                    alt="GitHub followers" />
+                                <img src="https://img.shields.io/github/stars/jakariasks?affiliations=OWNER%2CCOLLABORATOR&style=for-the-badge&logo=github"
+                                    alt="GitHub stars" />
+                                <img src="https://img.shields.io/github/last-commit/jakariasks/jakariasks-portfolio?style=for-the-badge&logo=github"
+                                    alt="Last commit" />
+                                <a href="https://github.com/jakariasks?tab=repositories" target="_blank"
+                                    rel="noopener noreferrer">
+                                    View Repositories
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-label">About</p>
+                    <h2>Personal introduction with purpose and clarity</h2>
+                    <p>
+                        A brief space to present your identity, passion, and long-term
+                        goals in a clean and premium format.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-profile glass-card reveal">
+                        <div class="profile-placeholder">
+                            <img src="jakaria_img.jpeg" alt="Profile Image">
+                        </div>
+                    </div>
+
+                    <div class="about-content reveal delay-1">
+                        <div class="glass-card about-card">
+                            <p>
+                                I’m Jakaria Hasan, a Computer Science and Engineering student with an intermediate
+                                background in web design and a growing passion for software development and AI. I focus
+                                on crafting modern, responsive, and visually polished web experiences that feel both
+                                fast and intuitive.
+
+                                I’m continuously learning and evolving, working toward becoming a well-rounded developer
+                                capable of building smart, scalable, and meaningful digital solutions.
+                            </p>
+                            <p>
+                                My goal is to build modern and intelligent digital products that reflect
+                                professionalism, creativity, and technical excellence while delivering real value to
+                                users.
+                            </p>
+                        </div>
+
+                        <div class="stats-grid">
+                            <div class="stat-card glass-card reveal">
+                                <h3>Creative</h3>
+                                <p>Modern visual direction and polished UI thinking.</p>
+                            </div>
+                            <div class="stat-card glass-card reveal">
+                                <h3>Focused</h3>
+                                <p>Performance-first approach with maintainable structure.</p>
+                            </div>
+                            <div class="stat-card glass-card reveal">
+                                <h3>Driven</h3>
+                                <p>Always learning and building toward better experiences.</p>
+                            </div>
+                            <div class="stat-card glass-card reveal">
+                                <h3>Reliable</h3>
+                                <p>Responsive layouts and detail-oriented execution.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="education">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-label">Education</p>
+                    <h2>My academic journey and growth</h2>
+                    <p>
+                        A clear timeline of my academic background, learning path, and progress
+                        in computer science, web design, and modern technologies.
+                    </p>
+                </div>
+
+                <div class="education-layout">
+                    <div class="timeline premium-timeline">
+                        <article class="timeline-item glass-card reveal">
+                            <div class="timeline-icon">🎓</div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2022 - Present</span>
+                                <h3>BSc Engineering in Computer Science & Engineering (CSE)</h3>
+                                <p class="timeline-subtitle">
+                                    Begum Rokeya University, Rangpur (BRUR)
+                                </p>
+                                <p>
+                                    Currently pursuing a Bachelor of Science in Computer Science and
+                                    Engineering, building a strong foundation in programming, software
+                                    development, web technologies, and problem-solving. Alongside my
+                                    academic studies, I continue improving my practical skills through
+                                    projects and self-learning.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item glass-card reveal delay-1">
+                            <div class="timeline-icon">📘</div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2019 - 2021</span>
+                                <h3>Higher Secondary Certificate (HSC)</h3>
+                                <p class="timeline-subtitle">
+                                    Karatoa Multimidea School and College, Rangpur (KMSC)
+                                </p>
+                                <p>
+                                    Completed higher secondary education with a focus on academic
+                                    discipline, analytical thinking, and preparing for advanced study
+                                    in engineering and technology.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item glass-card reveal delay-2">
+                            <div class="timeline-icon">🏫</div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2017 - 2018</span>
+                                <h3>Secondary School Certificate (SSC)</h3>
+                                <p class="timeline-subtitle">
+                                    Karatoa Multimidea School and College, Rangpur (KMSC)
+                                </p>
+                                <p>
+                                    Built a strong educational foundation through secondary studies,
+                                    developing interest in science, technology, and future academic
+                                    growth.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <aside class="education-side">
+                        <div class="glass-card edu-highlight reveal">
+                            <h3>Academic Snapshot</h3>
+                            <div class="edu-stats">
+                                <div class="edu-stat">
+                                    <span class="edu-stat-label">Current Degree</span>
+                                    <strong>BSc in CSE</strong>
+                                </div>
+                                <div class="edu-stat">
+                                    <span class="edu-stat-label">University</span>
+                                    <strong>BRUR</strong>
+                                </div>
+                                <div class="edu-stat">
+                                    <span class="edu-stat-label">Focus</span>
+                                    <strong>Programming, Web Development and Machine Learning</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card edu-highlight reveal delay-1">
+                            <h3>CGPA / Result</h3>
+                            <p class="edu-note">
+                                5'th semester ongoing, currently maintaining a strong CGPA while balancing academic
+                                coursework with practical skill development and project work.
+                            </p>
+                            <div class="cgpa-box">
+                                <span>Current CGPA</span>
+                                <strong>3.56 / 4.00</strong>
+                            </div>
+                        </div>
+
+                        <div class="glass-card edu-highlight reveal delay-2">
+                            <h3>Achievements</h3>
+                            <ul class="achievement-list">
+                                <li>Built multiple modern web design projects</li>
+                                <li>Exploring Machine Learning and AI tools and practical applications</li>
+                                <li>Focused on improving technical and creative skills</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-label">Skills</p>
+                    <h2>Modern, scannable, and interactive</h2>
+                    <p>
+                        An engaging blend of visual progress bars and skill tags that makes expertise easy to understand
+                        at a glance.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="glass-card reveal">
+                        <h3 class="card-title">Core Skills</h3>
+
+                        <div class="skill-item">
+                            <div class="skill-top">
+                                <span>HTML</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar"><span data-width="95%"></span></div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-top">
+                                <span>CSS</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar"><span data-width="90%"></span></div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-top">
+                                <span>JavaScript</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar"><span data-width="85%"></span></div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-top">
+                                <span>C/C++</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar"><span data-width="70%"></span></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-top">
+                                <span>Python</span>
+                                <span>50%</span>
+                            </div>
+                            <div class="skill-bar"><span data-width="50%"></span></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-top">
+                                <span>Java</span>
+                                <span>40%</span>
+                            </div>
+                            <div class="skill-bar"><span data-width="40%"></span></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-top">
+                                <span>MongoDB</span>
+                                <span>50%</span>
+                            </div>
+                            <div class="skill-bar"><span data-width="50%"></span></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-top">
+                                <span>MySQL</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-bar"><span data-width="60%"></span></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-top">
+                                <span>UI/UX Thinking</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar"><span data-width="80%"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card reveal delay-1">
+                        <h3 class="card-title">Tools & Stack</h3>
+                        <div class="tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                            <span>Express.js</span>
+                            <span>Responsive UI</span>
+                            <span>Performance</span>
+                            <span>Accessibility</span>
+                            <span>Animations</span>
+                            <span>Frontend</span>
+                            <span>Portfolio Design</span>
+                        </div>
+                        <div class="glass-card reveal delay-1 soft-skills-subcard">
+                            <h3 class="card-title">Soft Skills</h3>
+                            <div class="tags">
+                                <span>Communication</span>
+                                <span>Time Management</span>
+                                <span>Teamwork</span>
+                                <span>Problem Solving</span>
+                                <span>Leadership</span>
+                                <span>Networking Skill</span>
+                                <span>Adaptability (Learning Fast)</span>
+                                <span>Critical Thinking</span>
+                                <span>Confidence & Presentation</span>
+                                <span>Consistency & Discipline</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="works"> 
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-label">Works/projects</p>
+                    <h2>Selected projects and showcases</h2>
+                    <p>
+                    <p>
+                        Discover the projects I’ve built at solo and Softthikners to solve real-life problems
+                        using modern technology, creativity, and teamwork.
+                    </p> 
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card glass-card reveal">
+                        <div class="project-image">Project Preview</div>
+                        <div class="project-body">
+                            <div class="project-top">
+                                <h3>Project One</h3>
+                                <span class="project-badge">Featured</span>
+                            </div>
+                            <p>
+                                A sleek portfolio or product interface focused on responsive
+                                layout, fast performance, and a premium visual style. 
+                            </p>
+                            <div class="project-stack">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-small btn-primary">Live Demo</a>
+                                <a href="#" class="btn btn-small btn-secondary">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card glass-card reveal delay-1">
+                        <div class="project-image">Project Preview</div>
+                        <div class="project-body">
+                            <div class="project-top">
+                                <h3>Project Two</h3>
+                                <span class="project-badge">UI Concept</span>
+                            </div>
+                            <p>
+                                A modern dashboard or web interface with interactive cards,
+                                subtle motion, and a performance-conscious structure.
+                            </p>
+                            <div class="project-stack">
+                                <span>UI Design</span>
+                                <span>Responsive</span>
+                                <span>Frontend</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-small btn-primary">Live Demo</a>
+                                <a href="#" class="btn btn-small btn-secondary">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card glass-card reveal delay-2">
+                        <div class="project-image">Project Preview</div>
+                        <div class="project-body">
+                            <div class="project-top">
+                                <h3>Project Three</h3>
+                                <span class="project-badge">Dynamic</span>
+                            </div>
+                            <p>
+                                A polished personal or client project featuring elegant layout,
+                                clean branding, and smooth micro-interactions.
+                            </p>
+                            <div class="project-stack">
+                                <span>Web</span>
+                                <span>Design</span>
+                                <span>Optimization</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-small btn-primary">Live Demo</a>
+                                <a href="#" class="btn btn-small btn-secondary">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-label">Contact</p>
+                    <h2>Let’s build something impressive</h2>
+                    <p>
+                        Reach out directly by email or customize the form for your
+                        preferred workflow.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="glass-card contact-info reveal">
+                        <h3>Contact Information</h3>
+                        <p>
+                            I’m open to collaborations, freelance work, and creative
+                            opportunities.
+                        </p>
+
+                        <div class="contact-list">
+                            <a href="mailto:sksjakaria@gmail.com" class="contact-item">
+                                <span>✉</span>
+                                <span>sksjakaria@gmail.com</span>
+                            </a>
+                            <a href="mailto:sksjakaria@gmail.com" class="btn btn-primary">
+                                Contact Me with Socials links
+                            </a>
+                        </div>
+
+                        <div class="socials">
+                            <a href="https://github.com/jakariasks" aria-label="GitHub" target="_blank">GitHub</a>
+                            <a href="https://www.linkedin.com/in/jakaria-sks/" aria-label="LinkedIn"
+                                target="_blank">LinkedIn</a>
+                            <a href="https://www.facebook.com/jakaria.sks" aria-label="Facebook"
+                                target="_blank">Facebook</a>
+                            <a href="https://www.instagram.com/jakaria.sks?igsh=MXIzb29lanpoZmZ4MA=="
+                                aria-label="Instagram" target="_blank">Instagram</a>
+                        </div>
+                    </div>
+                    <form class="glass-card contact-form reveal delay-1" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input id="name" type="text" name="from_name" placeholder="Enter your name" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input id="email" type="email" name="reply_to" placeholder="Enter your email" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input id="subject" type="text" name="subject" placeholder="Enter subject" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Write your message"
+                                required></textarea>
+                        </div>
+
+                        <input type="hidden" name="to_email" value="sksjakaria@gmail.com" />
+
+                        <button type="submit" class="btn btn-primary" id="sendBtn">
+                            Send Message
+                        </button>
+
+                        <p class="form-status" id="formStatus"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 Jakaria Hasan. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#works">Works</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
