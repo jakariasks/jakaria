@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 72px;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+  .light ::-webkit-scrollbar-track {
+    background: #eef2ff;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #f59e0b;
+    border-radius: 3px;
+  }
+}
+
+@layer utilities {
+  /* Theme-aware glass card: dark = subtle frosted black, light = soft white card on the gradient */
+  .glass {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .light .glass {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(99, 102, 241, 0.12);
+    box-shadow: 0 4px 24px rgba(30, 41, 59, 0.06);
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 30px rgba(251, 191, 36, 0.25);
+  }
+
+  .light .gold-glow {
+    box-shadow: 0 0 24px rgba(245, 158, 11, 0.15);
+  }
+
+  .gold-border {
+    border: 1px solid rgba(251, 191, 36, 0.3);
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24, #d97706);
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Dark theme section backgrounds */
+  .dark .section-dark {
+    background: #080808;
+  }
+  .dark .section-darker {
+    background: #050505;
+  }
+
+  /* Light theme section backgrounds — soft BazarHQ-style washes, alternating angle so sections feel distinct */
+  .light .section-dark {
+    background: linear-gradient(160deg, #eef2ff 0%, #f5f3ff 45%, #eff6ff 100%);
+  }
+  .light .section-darker {
+    background: linear-gradient(200deg, #f8fafc 0%, #eef2ff 50%, #f0f9ff 100%);
+  }
+}
+
+.dark body {
+  background-color: #080808;
+  color: #f1f5f9;
+}
+
+/* Light mode body: soft diagonal gradient inspired by BazarHQ hero, angled differently per the request */
+.light body {
+  background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 35%, #eff6ff 70%, #f0f9ff 100%);
+  background-attachment: fixed;
+  color: #1e293b;
+}
