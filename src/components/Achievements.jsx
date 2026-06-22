@@ -32,7 +32,10 @@ const styleMap = {
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="relative py-24 sm:py-28 section-darker overflow-hidden">
+    <section
+      id="achievements"
+      className="relative py-24 sm:py-28 section-darker overflow-hidden"
+    >
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-amber-500/5 rounded-full blur-3xl" />
@@ -40,12 +43,15 @@ export default function Achievements() {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
-        <SectionTitle eyebrow="Recognition & Involvement" title="Achievements & Activities" />
+        <SectionTitle
+          eyebrow="Recognition & Involvement"
+          title="Achievements & Activities"
+        />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {achievements.map((a, i) => {
-            const Icon = Icons[a.icon]
-            const style = styleMap[a.color]
+            const Icon = Icons[a.icon] || Icons.Award
+            const style = styleMap[a.color] || styleMap.blue
 
             return (
               <motion.div
@@ -55,11 +61,13 @@ export default function Achievements() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                whileHover={{ y: -6 }}
                 style={{
                   boxShadow: `0 0 0 0 ${style.glow}`,
                 }}
-                whileHover={{ y: -6, boxShadow: `0 8px 40px ${style.glow}` }}
+                whileHover={{
+                  y: -6,
+                  boxShadow: `0 8px 40px ${style.glow}`,
+                }}
               >
                 {/* Top corner glow */}
                 <div
@@ -68,29 +76,44 @@ export default function Achievements() {
                 />
 
                 {/* Number badge */}
-                <div className={`absolute top-4 right-4 text-xs font-bold px-2 py-0.5 rounded-full border ${style.badge}`}>
+                <div
+                  className={`absolute top-4 right-4 text-xs font-bold px-2 py-0.5 rounded-full border ${style.badge}`}
+                >
                   #{String(i + 1).padStart(2, '0')}
                 </div>
 
                 {/* Icon */}
-                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-5 ${style.icon}`}>
-                  {Icon && <Icon size={22} strokeWidth={1.8} />}
+                <div
+                  className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-5 ${style.icon}`}
+                >
+                  <Icon size={22} strokeWidth={1.8} />
                 </div>
 
                 {/* Content */}
                 <h3 className="font-display font-bold text-white text-lg mb-1.5 pr-10 leading-snug">
                   {a.title}
                 </h3>
-                <p className="text-slate-300 text-base mb-1 font-medium">{a.subtitle}</p>
-                <p className="text-slate-500 text-sm leading-relaxed">{a.organizer}</p>
+
+                <p className="text-slate-300 text-base mb-1 font-medium">
+                  {a.subtitle}
+                </p>
+
+                <p className="text-slate-500 text-sm leading-relaxed">
+                  {a.organizer}
+                </p>
 
                 {/* Bottom accent line */}
-                <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
-                  a.color === 'gold' ? 'from-transparent via-amber-400 to-transparent' :
-                  a.color === 'blue' ? 'from-transparent via-blue-400 to-transparent' :
-                  a.color === 'purple' ? 'from-transparent via-purple-400 to-transparent' :
-                  'from-transparent via-emerald-400 to-transparent'
-                }`} />
+                <div
+                  className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
+                    a.color === 'gold'
+                      ? 'from-transparent via-amber-400 to-transparent'
+                      : a.color === 'blue'
+                        ? 'from-transparent via-blue-400 to-transparent'
+                        : a.color === 'purple'
+                          ? 'from-transparent via-purple-400 to-transparent'
+                          : 'from-transparent via-emerald-400 to-transparent'
+                  }`}
+                />
               </motion.div>
             )
           })}
