@@ -1,7 +1,7 @@
 export const profile = {
   name: 'Jakaria Hasan',
-  tagline: 'Computer Science Engineering Student | Full Stack Web Developer | Educator',
-  heroHeadline: 'CSE Student, Full Stack Web Developer & Passionate Educator',
+  tagline: 'Computer Science Engineering Student | Full Stack Web Developer | Software Engineer | Educator',
+  heroHeadline: 'CSE Student, Full Stack Web Developer & Software Engineer & Passionate Educator',
   location: 'Rangpur, Bangladesh',
   email: 'sksjakaria@gmail.com',
   socials: {
@@ -12,14 +12,15 @@ export const profile = {
   heroDescription:
     'I am a Computer Science Engineering student at Begum Rokeya University, Rangpur, passionate about building real-world web applications, solving problems with clean code, and sharing knowledge through teaching.',
   bio: [
-    'Jakaria Hasan is a motivated and enthusiastic Computer Science Engineering student at Begum Rokeya University, Rangpur. He is passionate about full-stack web development, clean UI design, problem solving, real-world software projects, and modern web technologies. Alongside software development, he has strong experience in teaching Science and ICT to SSC, HSC, and admission-level students.',
-    'He enjoys learning, building, teaching, mentoring, and working on meaningful projects that solve real-life problems. His strengths include communication, public speaking, punctuality, leadership, creativity, collaboration, and quick learning.',
+    "I'm a Jakaria Hasan, motivated and enthusiastic Computer Science Engineering student at Begum Rokeya University, Rangpur. I'm passionate about full-stack web development, clean UI design, problem solving, real-world software projects, and modern web technologies. Alongside software development, I have strong experience teaching Science and ICT to SSC, HSC, and admission-level students.",
+
+    "I enjoy learning, building, teaching, mentoring, and working on meaningful projects that solve real-life problems. My strengths include communication, public speaking, punctuality, leadership, creativity, collaboration, and quick learning.",
   ],
   stats: [
     { label: 'Years Teaching', value: '6+' },
     { label: 'University', value: 'BRUR' },
-    { label: 'CGPA', value: '3.47' },
-    { label: 'Achievement', value: '🥈 2024' },
+    { label: 'CGPA', value: '3.57' },
+    { label: 'Location', value: 'Rangpur, Bangladesh' },
   ],
   resumes: {
     developer: '/Jakaria_Hasan_Developer_CV.pdf',

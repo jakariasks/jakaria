@@ -32,17 +32,17 @@ export default function Footer() {
               </div>
               <span className="font-display font-semibold text-white">Jakaria Hasan</span>
             </div>
-            <p className="text-slate-500 text-sm leading-relaxed">
+           <p className="text-slate-500 text-base leading-relaxed">
               Building Digital Solutions & Inspiring Learners.
             </p>
           </div>
 
           <div>
-            <h4 className="text-white font-display font-semibold text-sm mb-4">Quick Links</h4>
+           <h4 className="text-white font-display font-semibold text-base mb-4">Quick Links</h4>
             <ul className="space-y-2.5">
               {quickLinks.map(l => (
                 <li key={l.href}>
-                  <a href={l.href} className="text-slate-500 hover:text-amber-400 text-sm transition-colors">
+                  <a href={l.href} className="text-slate-500 hover:text-amber-400 text-base transition-colors">
                     {l.label}
                   </a>
                 </li>
@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-6 border-t border-white/5 text-center">
-          <p className="text-slate-600 text-xs">© 2026 Jakaria Hasan. All rights reserved.</p>
+          <p className="text-slate-600 text-sm">© 2026 Jakaria Hasan. All rights reserved.</p>
         </div>
       </div>
     </footer>

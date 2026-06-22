@@ -20,25 +20,23 @@ const cards = [
   {
     icon: Facebook,
     label: 'Facebook',
-    text: 'facebook.com/jakaria.sks',
     href: profile.socials.facebook,
     external: true,
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    text: 'linkedin.com/in/jakaria-sks',
     href: profile.socials.linkedin,
     external: true,
   },
   {
     icon: Github,
     label: 'GitHub',
-    text: 'github.com/jakariasks',
     href: profile.socials.github,
     external: true,
   },
-]
+
+] 
 
 export default function SocialLinks() {
   return (

@@ -31,4 +31,12 @@ export const achievements = [
     organizer: 'University Programming Community',
     color: 'emerald',
   },
+  {
+    id: 5,
+    icon: 'BadgeCheck',
+    title: 'Certified — Digital Marketing & Branding for Start Ups',
+    subtitle: 'Course length: 15 hours · June 2026',
+    organizer: 'Leipzig University (SEPT) × BRUR × GIZ — DS2S Project',
+    color: 'blue',
+  },
 ]

@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: 1,
-    image: '/projects/personal-portfolio.jpg',
+    image: '/projects/Protfolio_image.png',
     title: 'Personal Portfolio Website',
     description: 'A responsive personal portfolio website to showcase skills, CV, projects, achievements, and contact information. Built with modern UI patterns and smooth animations.',
     tech: ['HTML', 'CSS', 'JavaScript', 'React'],
@@ -14,7 +14,7 @@ export const projects = [
   },
   {
     id: 2,
-    image: '/projects/student-result-management.jpg',
+    image: '/projects/srms.png',
     title: 'Student Result Management System',
     description: 'A basic result management system to store, manage, and display student results securely, with admin controls and structured data handling.',
     tech: ['PHP', 'MySQL'],
@@ -27,7 +27,7 @@ export const projects = [
   },
   {
     id: 3,
-    image: '/projects/fakecheck-bd.jpg',
+    image: '/projects/fakecheckbd.png',
     title: 'FakeCheck BD',
     description: 'An ML-based product authenticity checker concept for Bangladesh. The project focuses on detecting fake or suspicious products using dataset research and intelligent verification planning.',
     tech: ['Machine Learning', 'UI Planning', 'Dataset Research'],
@@ -40,7 +40,7 @@ export const projects = [
   },
   {
     id: 4,
-    image: '/projects/bazarhq.jpg',
+    image: '/projects/bazarhq.png',
     title: 'BazarHQ',
     description: 'A Bangladesh-focused SaaS e-commerce and online shop builder web application inspired by platforms like Shopify. It helps merchants launch and manage online stores with ease.',
     tech: ['React', 'Tailwind CSS', 'Supabase', 'Vercel'],
@@ -53,7 +53,7 @@ export const projects = [
   },
   {
     id: 5,
-    image: '/projects/dengue-alert-bd.jpg',
+    image: '/projects/dengu_alert.png',
     title: 'Dengue Alert BD',
     description: 'A dashboard-based academic project for dengue outbreak prediction and hospital bed demand estimation in Bangladesh using numerical methods and data visualization techniques.',
     tech: ['React', 'Numerical Methods', 'Data Visualization', 'Forecasting'],

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Facebook, Mail, Download, ArrowDown } from 'lucide-react'
 import { profile } from '../data/profileData'
+import HeroSlideshow from './HeroSlideshow'
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 28 },
@@ -42,7 +43,7 @@ export default function Hero() {
               className="text-gray-700 dark:text-slate-300 text-lg sm:text-xl leading-relaxed mb-4 font-medium"
               {...fadeUp(0.3)}
             >
-              CSE Student · Full Stack Web Developer · Passionate Educator
+              CSE Student · Software Engineer · Passionate Educator
             </motion.p>
 
             <motion.p className="text-gray-500 dark:text-slate-400 text-base leading-relaxed mb-8 max-w-lg" {...fadeUp(0.35)}>
@@ -69,7 +70,7 @@ export default function Hero() {
                 href="#contact"
                 className="px-6 py-3 rounded-xl border border-gray-300 dark:border-white/10 text-gray-700 dark:text-slate-300 hover:border-gray-400 dark:hover:border-white/20 hover:text-gray-900 dark:hover:text-white font-semibold text-sm transition-all"
               >
-                Contact Me
+                Call me ➟ 01306 060688
               </a>
             </motion.div>
 
@@ -114,44 +115,20 @@ export default function Hero() {
                 <div className="text-gray-500 dark:text-slate-400 text-xs">Years Teaching</div>
               </motion.div>
 
-              <motion.div
-                className="absolute -right-12 top-20 z-10 bg-white/95 dark:bg-[#111]/90 backdrop-blur border border-amber-500/25 rounded-2xl px-4 py-3 shadow-xl"
-                animate={{ y: [0, 8, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-              >
-                <div className="text-amber-600 dark:text-amber-400 font-bold text-lg font-display">3.47</div>
-                <div className="text-gray-500 dark:text-slate-400 text-xs">CGPA at BRUR</div>
-              </motion.div>
 
               <motion.div
                 className="absolute -left-10 bottom-16 z-10 bg-white/95 dark:bg-[#111]/90 backdrop-blur border border-emerald-500/25 rounded-2xl px-4 py-3 shadow-xl"
                 animate={{ y: [0, 6, 0] }}
                 transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
               >
-                <div className="text-emerald-600 dark:text-emerald-400 font-bold text-xs font-display">🥈 Runner-up</div>
-                <div className="text-gray-500 dark:text-slate-400 text-xs">Software Challenge 2024</div>
+                <div className="text-emerald-600 dark:text-emerald-400 font-bold text-xs font-display">Quick Learner</div>
+                <div className="text-gray-500 dark:text-slate-400 text-xs">Learning ML&AI</div>
               </motion.div>
 
-              {/* Profile image container */}
+{/* Profile slideshow container */}
               <div className="relative w-72 h-72 sm:w-80 sm:h-80 xl:w-96 xl:h-96">
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-amber-500/30 to-amber-700/10 blur-xl" />
-                <div className="relative w-full h-full rounded-3xl border-2 border-amber-500/30 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-[#1a1a1a] dark:to-[#111] shadow-[0_0_60px_rgba(251,191,36,0.15)]">
-                  <img
-                    src="/jakaria.jpeg"
-                    alt="Jakaria Hasan — CSE Student, Web Developer and Educator"
-                    className="w-full h-full object-cover object-top"
-                    onError={e => {
-                      e.target.style.display = 'none'
-                      e.target.parentElement.querySelector('.placeholder-avatar').style.display = 'flex'
-                    }}
-                  />
-                  <div
-                    className="placeholder-avatar hidden w-full h-full items-center justify-center"
-                    style={{ display: 'none' }}
-                  >
-                    <div className="text-9xl select-none">👨‍💻</div>
-                  </div>
-                </div>
+                <HeroSlideshow />
               </div>
             </div>
           </motion.div>

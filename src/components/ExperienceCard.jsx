@@ -15,16 +15,15 @@ export default function ExperienceCard({ exp, index }) {
           Current
         </span>
       )}
-      <h3 className="font-display font-semibold text-gray-900 dark:text-white text-base mb-1 pr-16">{exp.position}</h3>
-      <p className="text-amber-600 dark:text-amber-400 text-sm mb-3">{exp.institution}</p>
-
-      <div className="flex items-center gap-1.5 text-gray-500 dark:text-slate-500 text-xs mb-2">
+    <h3 className="font-display font-semibold text-gray-900 dark:text-white text-lg mb-1 pr-16">{exp.position}</h3>      
+    <p className="text-amber-600 dark:text-amber-400 text-base mb-3">{exp.institution}</p>
+    <div className="flex items-center gap-1.5 text-gray-500 dark:text-slate-500 text-sm mb-2">       
         <Calendar size={12} />
         {exp.duration} · {exp.classes}
       </div>
 
-      <div className="flex items-start gap-1.5 text-gray-500 dark:text-slate-500 text-xs mb-4">
-        <BookOpen size={12} className="mt-0.5 flex-shrink-0" />
+    <div className="flex items-start gap-1.5 text-gray-500 dark:text-slate-500 text-sm mb-4">        
+  <BookOpen size={12} className="mt-0.5 flex-shrink-0" />
         <span>{exp.subjects.join(', ')}</span>
       </div>
 

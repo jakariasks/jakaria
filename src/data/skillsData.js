@@ -8,7 +8,6 @@ export const skillCategories = [
       { name: 'CSS', level: 'Comfortable' },
       { name: 'JavaScript', level: 'Comfortable' },
       { name: 'React', level: 'Improving' },
-      { name: 'Bootstrap', level: 'Comfortable' },
       { name: 'Tailwind CSS', level: 'Comfortable' },
     ],
   },
@@ -17,9 +16,9 @@ export const skillCategories = [
     title: 'Backend',
     icon: 'Server',
     skills: [
-      { name: 'PHP', level: 'Beginner' },
       { name: 'Node.js', level: 'Learning' },
-      { name: 'REST API', level: 'Learning' },
+      { name: 'Express.js', level: 'Learning' },
+      { name: 'Supabase', level: 'Learning' },
     ],
   },
   {
@@ -28,8 +27,8 @@ export const skillCategories = [
     icon: 'Database',
     skills: [
       { name: 'MySQL', level: 'Beginner' },
-      { name: 'RDBMS Concepts', level: 'Comfortable' },
-      { name: 'Supabase', level: 'Beginner' },
+      { name: 'PostgreSQL', level: 'Comfortable' },
+      { name: 'Supabase', level: 'Learning' },
     ],
   },
   {
@@ -40,7 +39,7 @@ export const skillCategories = [
       { name: 'C', level: 'Comfortable' },
       { name: 'C++', level: 'Comfortable' },
       { name: 'Java', level: 'Beginner' },
-      { name: 'Python', level: 'Beginner' },
+      { name: 'Python', level: 'Comfortable' },
       { name: 'JavaScript', level: 'Comfortable' },
     ],
   },
@@ -52,19 +51,7 @@ export const skillCategories = [
       { name: 'Git', level: 'Comfortable' },
       { name: 'GitHub', level: 'Comfortable' },
       { name: 'VS Code', level: 'Comfortable' },
-      { name: 'Vite', level: 'Comfortable' },
       { name: 'Vercel', level: 'Comfortable' },
-    ],
-  },
-  {
-    id: 'dsa',
-    title: 'Problem Solving',
-    icon: 'BrainCircuit',
-    skills: [
-      { name: 'DSA Basics', level: 'Improving' },
-      { name: 'Logical Thinking', level: 'Comfortable' },
-      { name: 'Codeforces', level: 'Improving' },
-      { name: 'LeetCode', level: 'Improving' },
     ],
   },
   {
@@ -72,8 +59,8 @@ export const skillCategories = [
     title: 'Currently Learning',
     icon: 'Sparkles',
     skills: [
-      { name: 'MERN Stack', level: 'Learning' },
-      { name: 'RESTful APIs', level: 'Learning' },
+      { name: 'ML / AI ', level: 'Learning' },
+      { name: 'Thesis Writing', level: 'Learning' },
       { name: 'Advanced React', level: 'Learning' },
       { name: 'Backend Dev', level: 'Learning' },
     ],
@@ -82,7 +69,14 @@ export const skillCategories = [
 
 export const levelColors = {
   Comfortable: 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border-emerald-300 dark:border-emerald-500/30',
-  Improving: 'bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-400 border-blue-300 dark:border-blue-500/30',
-  Learning: 'bg-amber-100 dark:bg-gold-500/20 text-amber-700 dark:text-gold-400 border-amber-300 dark:border-gold-500/30',
-  Beginner: 'bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-400 border-purple-300 dark:border-purple-500/30',
+  Improving:   'bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-400 border-blue-300 dark:border-blue-500/30',
+  Learning:    'bg-amber-100 dark:bg-amber-500/20 text-amber-700 dark:text-amber-400 border-amber-300 dark:border-amber-500/30',
+  Beginner:    'bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-400 border-purple-300 dark:border-purple-500/30',
+}
+
+export const levelBar = {
+  Comfortable: { percent: 80, color: 'bg-emerald-500' },
+  Improving:   { percent: 60, color: 'bg-blue-500' },
+  Learning:    { percent: 40, color: 'bg-amber-500' },
+  Beginner:    { percent: 25, color: 'bg-purple-500' },
 }

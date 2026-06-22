@@ -43,9 +43,9 @@ export default function ProjectCard({ project, index }) {
 
       <div className="p-6">
         <div className="flex items-start justify-between gap-3 mb-3">
-          <h3 className="font-display font-semibold text-gray-900 dark:text-white text-base">
+          <h3 className="font-display font-semibold text-gray-900 dark:text-white text-lg">
             {project.title}
-          </h3>
+            </h3>
 
           <span
             className={`flex-shrink-0 text-[10px] font-semibold uppercase tracking-wide px-2 py-1 rounded-full border ${statusClass}`}
@@ -54,12 +54,12 @@ export default function ProjectCard({ project, index }) {
           </span>
         </div>
 
-        <p className="text-gray-500 dark:text-slate-500 text-xs leading-relaxed mb-4">
+        <p className="text-gray-500 dark:text-slate-500 text-sm leading-relaxed mb-4">
           {project.description}
-        </p>
+          </p>
 
-        <p className="text-amber-600 dark:text-amber-400/80 text-xs mb-3">
-          Role: {project.role}
+        <p className="text-amber-600 dark:text-amber-400/80 text-sm mb-3">Role: 
+         {project.role}
         </p>
 
         <div className="flex flex-wrap gap-1.5 mb-5">

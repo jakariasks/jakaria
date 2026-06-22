@@ -19,7 +19,7 @@ export const teachingExperience = [
   },
   {
     id: 3,
-    position: 'Lecturer',
+    position: 'Science Teacher',
     institution: 'Classmate Coaching Center, Rangpur',
     classes: 'Class 9–10 / SSC',
     subjects: ['Biology', 'Physics'],
@@ -33,11 +33,11 @@ export const teachingExperience = [
     classes: 'SSC – HSC',
     subjects: ['Physics', 'Chemistry', 'Biology', 'ICT'],
     duration: 'Occasional',
-    current: false,
+    current: true,
   },
   {
     id: 5,
-    position: 'Home Tutor',
+    position: 'Home Tutor & Mentor',
     institution: 'Private Students, Rangpur',
     classes: 'SSC, HSC & Admission Level',
     subjects: ['Physics', 'Chemistry', 'Biology', 'Math', 'ICT'],

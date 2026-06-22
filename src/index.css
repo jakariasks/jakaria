@@ -14,9 +14,10 @@
     scroll-padding-top: 72px;
   }
 
-  body {
+ body {
     font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
+    font-size: 16px;
   }
 
   ::-webkit-scrollbar {

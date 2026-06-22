@@ -18,7 +18,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             {profile.bio.map((p, i) => (
-              <p key={i} className="text-gray-700 dark:text-slate-400 leading-relaxed text-base">
+              <p key={i} className="text-gray-700 dark:text-slate-400 leading-relaxed text-lg">
                 {p}
               </p>
             ))}
@@ -60,8 +60,8 @@ export default function About() {
                 <div className="w-11 h-11 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4 group-hover:bg-amber-500/20 transition-colors">
                   {Icon && <Icon size={20} className="text-amber-600 dark:text-amber-400" />}
                 </div>
-                <h4 className="font-display font-semibold text-gray-900 dark:text-white text-sm mb-2">{item.title}</h4>
-                <p className="text-gray-500 dark:text-slate-500 text-xs leading-relaxed">{item.description}</p>
+                <h4 className="font-display font-semibold text-gray-900 dark:text-white text-base mb-2">{item.title}</h4>
+                <p className="text-gray-500 dark:text-slate-500 text-sm leading-relaxed">{item.description}</p>
               </motion.div>
             )
           })}
