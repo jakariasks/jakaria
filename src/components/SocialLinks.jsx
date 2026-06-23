@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Mail, MapPin, Facebook, Linkedin, Github } from 'lucide-react'
+import { Mail, MapPin, Facebook, Linkedin, Github, Phone } from 'lucide-react'
 import { profile } from '../data/profileData'
 
 const cards = [
@@ -29,14 +29,21 @@ const cards = [
     href: profile.socials.linkedin,
     external: true,
   },
-  {
+  
+{
     icon: Github,
     label: 'GitHub',
     href: profile.socials.github,
     external: true,
   },
-
-] 
+  {
+    icon: Phone,
+    label: 'WhatsApp',
+    text: '01306060688',
+    href: 'https://wa.me/8801306060688',
+    external: true,
+  },
+]
 
 export default function SocialLinks() {
   return (

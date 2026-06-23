@@ -43,25 +43,75 @@ export default function About() {
           </motion.div>
         </div>
 
-        {/* What I Do */}
-        <h3 className="font-display text-xl font-semibold text-gray-900 dark:text-white text-center mb-10">What I Do</h3>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+       {/* What I Do */}
+        <div className="text-center mb-10">
+          <span className="text-sm font-semibold tracking-widest uppercase text-amber-500">What I Do</span>
+          <div className="mx-auto mt-2 w-10 h-0.5 bg-amber-500 rounded-full" />
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
           {whatIDo.map((item, i) => {
             const Icon = Icons[item.icon]
+            const gradients = [
+              'from-amber-500/20 to-orange-600/10 border-amber-500/30 hover:border-amber-400/60',
+              'from-blue-500/20 to-indigo-600/10 border-blue-500/30 hover:border-blue-400/60',
+              'from-purple-500/20 to-violet-600/10 border-purple-500/30 hover:border-purple-400/60',
+              'from-emerald-500/20 to-teal-600/10 border-emerald-500/30 hover:border-emerald-400/60',
+              'from-rose-500/20 to-pink-600/10 border-rose-500/30 hover:border-rose-400/60',
+            ]
+            const iconColors = [
+              'bg-amber-500/15 text-amber-500',
+              'bg-blue-500/15 text-blue-400',
+              'bg-purple-500/15 text-purple-400',
+              'bg-emerald-500/15 text-emerald-400',
+              'bg-rose-500/15 text-rose-400',
+            ]
+            const glows = [
+              'rgba(251,191,36,0.12)',
+              'rgba(59,130,246,0.12)',
+              'rgba(168,85,247,0.12)',
+              'rgba(16,185,129,0.12)',
+              'rgba(244,63,94,0.12)',
+            ]
             return (
               <motion.div
                 key={item.title}
-                className="glass rounded-2xl p-6 hover:gold-glow hover:border-amber-500/30 transition-all group"
+                className={`relative rounded-2xl p-6 bg-gradient-to-br ${gradients[i]} border backdrop-blur-sm overflow-hidden group transition-all duration-300 cursor-default`}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
+                transition={{ duration: 0.45, delay: i * 0.08 }}
+                whileHover={{ y: -6, boxShadow: `0 12px 40px ${glows[i]}` }}
               >
-                <div className="w-11 h-11 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4 group-hover:bg-amber-500/20 transition-colors">
-                  {Icon && <Icon size={20} className="text-amber-600 dark:text-amber-400" />}
+                {/* Corner glow */}
+                <div
+                  className="absolute -top-5 -right-5 w-20 h-20 rounded-full blur-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-500"
+                  style={{ background: glows[i] }}
+                />
+
+                {/* Number */}
+                <div className="absolute top-4 right-4 text-xs font-bold text-white/20 font-display">
+                  {String(i + 1).padStart(2, '0')}
                 </div>
-                <h4 className="font-display font-semibold text-gray-900 dark:text-white text-base mb-2">{item.title}</h4>
-                <p className="text-gray-500 dark:text-slate-500 text-sm leading-relaxed">{item.description}</p>
+
+                {/* Icon */}
+                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-5 ${iconColors[i]}`}>
+                  {Icon && <Icon size={22} strokeWidth={1.8} />}
+                </div>
+
+                {/* Text */}
+                <h4 className="font-display font-bold text-gray-900 dark:text-white text-base mb-2 leading-snug">
+                  {item.title}
+                </h4>
+                <p className="text-gray-500 dark:text-slate-400 text-sm leading-relaxed">
+                  {item.description}
+                </p>
+
+                {/* Bottom accent line */}
+                <div
+                  className="absolute bottom-0 left-0 right-0 h-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"
+                  style={{ background: `linear-gradient(to right, transparent, ${glows[i].replace('0.12', '0.8')}, transparent)` }}
+                />
               </motion.div>
             )
           })}
