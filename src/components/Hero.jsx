@@ -23,9 +23,16 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left — Text */}
           <div className="order-2 lg:order-1">
-            <motion.div {...fadeUp(0.1)}>
-              <span className="inline-block text-xs font-semibold tracking-widest uppercase text-amber-500 mb-4 px-3 py-1.5 rounded-full border border-amber-500/25 bg-amber-500/8">
+            <motion.div className="flex flex-wrap items-center gap-3 mb-4" {...fadeUp(0.1)}>
+              <span className="inline-flex items-center text-xs font-semibold tracking-widest uppercase text-amber-500 px-3 py-1.5 rounded-full border border-amber-500/25 bg-amber-500/8">
                 👋 Welcome to my portfolio
+              </span>
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/8">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                </span>
+                Open to Opportunities
               </span>
             </motion.div>
 
@@ -43,7 +50,13 @@ export default function Hero() {
               className="text-gray-700 dark:text-slate-300 text-lg sm:text-xl leading-relaxed mb-4 font-medium"
               {...fadeUp(0.3)}
             >
-              CSE Student · Software Engineer · Passionate Educator
+              <span className="flex flex-wrap gap-x-2 gap-y-1 items-center">
+                <span>CSE Student</span>
+                <span className="text-amber-500">·</span>
+                <span>Full Stack Web Developer</span>
+                <span className="text-amber-500">·</span>
+                <span>Passionate Educator</span>
+              </span>
             </motion.p>
 
             <motion.p className="text-gray-500 dark:text-slate-400 text-base leading-relaxed mb-8 max-w-lg" {...fadeUp(0.35)}>

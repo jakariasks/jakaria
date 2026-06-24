@@ -18,9 +18,10 @@ function ImageLightbox({ src, alt, onClose }) {
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.85, opacity: 0 }}
         transition={{ duration: 0.3, ease: 'easeOut' }}
-        onClick={(e) => e.stopPropagation()}
+        onClick={e => e.stopPropagation()}
       >
         <button
+          type="button"
           onClick={onClose}
           className="absolute -top-4 -right-4 z-10 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-colors"
           aria-label="Close preview"
@@ -34,7 +35,9 @@ function ImageLightbox({ src, alt, onClose }) {
           className="w-full rounded-2xl border border-white/10 shadow-2xl"
         />
 
-        <p className="text-center text-slate-400 text-sm mt-3">{alt}</p>
+        <p className="text-center text-slate-400 text-sm mt-3">
+          {alt}
+        </p>
       </motion.div>
     </motion.div>
   )
@@ -89,7 +92,6 @@ export default function ProjectCard({ project, index }) {
                 onError={() => setImgError(true)}
               />
 
-              {/* Hover overlay with expand icon */}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
                 <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-10 h-10 rounded-full bg-white/20 backdrop-blur flex items-center justify-center border border-white/30">
                   <Maximize2 size={16} className="text-white" />
@@ -126,7 +128,7 @@ export default function ProjectCard({ project, index }) {
           </p>
 
           <div className="flex flex-wrap gap-1.5 mb-5">
-            {(project.tech || []).map((t) => (
+            {(project.tech || []).map(t => (
               <span
                 key={t}
                 className="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-slate-400 border border-gray-200 dark:border-white/5"
@@ -149,10 +151,9 @@ export default function ProjectCard({ project, index }) {
                 GitHub
               </a>
             ) : (
-              <div className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-gray-100 dark:bg-white/5 text-gray-400 dark:text-slate-600 text-sm font-medium cursor-not-allowed">
-                <Github size={14} />
-                GitHub
-              </div>
+              <span className="flex-1 text-center py-2.5 rounded-xl bg-gray-100/50 dark:bg-white/5 text-gray-400 dark:text-slate-600 text-xs font-medium border border-dashed border-gray-300 dark:border-white/10">
+                Private Repo
+              </span>
             )}
 
             {project.demo ? (
@@ -166,10 +167,9 @@ export default function ProjectCard({ project, index }) {
                 Live Demo
               </a>
             ) : (
-              <div className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-gray-100 dark:bg-white/5 text-gray-400 dark:text-slate-600 text-sm font-medium cursor-not-allowed">
-                <ExternalLink size={14} />
-                Live / Details
-              </div>
+              <span className="flex-1 text-center py-2.5 rounded-xl bg-gray-100/50 dark:bg-white/5 text-gray-400 dark:text-slate-600 text-xs font-medium border border-dashed border-gray-300 dark:border-white/10">
+                Coming Soon
+              </span>
             )}
           </div>
         </div>

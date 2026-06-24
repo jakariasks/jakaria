@@ -10,11 +10,11 @@ import DeveloperExperience from './components/DeveloperExperience'
 import Projects from './components/Projects'
 import Achievements from './components/Achievements'
 import SoftSkills from './components/SoftSkills'
-import Languages from './components/Languages'
 import ResumeCTA from './components/ResumeCTA'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
+import ScrollProgress from './components/ScrollProgress'
 
 export default function App() {
   const [loading, setLoading] = useState(true)
@@ -31,6 +31,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen transition-colors duration-300">
+      <ScrollProgress />
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero />
@@ -42,7 +43,6 @@ export default function App() {
         <Projects />
         <Achievements />
         <SoftSkills />
-        <Languages />
         <ResumeCTA />
         <Contact />
       </main>

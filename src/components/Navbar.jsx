@@ -157,10 +157,10 @@ export default function Navbar({ theme, toggleTheme }) {
               <a
                 href={profile.resumes.developer}
                 download
-                className="mt-2 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-black text-sm font-semibold transition-colors"
-              >
-                <Download size={15} />
-                Download CV
+                className="ml-1 flex items-center gap-1.5 px-4 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-black text-sm font-semibold transition-colors"
+          >
+            <Download size={14} />
+            Download CV
               </a>
             </div>
           </motion.div>
