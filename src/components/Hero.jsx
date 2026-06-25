@@ -1,13 +1,62 @@
-import { motion } from 'framer-motion'
 import { Github, Linkedin, Facebook, Mail, Download, ArrowDown } from 'lucide-react'
 import { profile } from '../data/profileData'
 import HeroSlideshow from './HeroSlideshow'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 28 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6, delay, ease: 'easeOut' },
 })
+
+
+const titles = [
+  { text: 'CSE Student', color: 'text-amber-500' },
+  { text: 'Full Stack Web Developer', color: 'text-blue-400' },
+  { text: 'Passionate Educator', color: 'text-emerald-400' },
+  { text: 'Open Source Contributor', color: 'text-purple-400' },
+  { text:  'Software Enthusiast', color: 'text-pink-400' },
+]
+
+function AnimatedTitle() {
+  const [index, setIndex] = useState(0)
+  const [visible, setVisible] = useState(true)
+
+  useEffect(() => {
+    const cycle = setInterval(() => {
+      setVisible(false)
+      setTimeout(() => {
+        setIndex(i => (i + 1) % titles.length)
+        setVisible(true)
+      }, 400)
+    }, 2500)
+    return () => clearInterval(cycle)
+  }, [])
+
+  return (
+    <div className="flex items-center gap-2.5">
+      <span className="text-gray-600 dark:text-slate-400 text-lg sm:text-xl font-medium">
+        I'm a
+      </span>
+      <AnimatePresence mode="wait">
+        {visible && (
+          <motion.span
+            key={titles[index].text}
+            className={`text-lg sm:text-xl font-bold font-display ${titles[index].color}`}
+            initial={{ opacity: 0, y: 12, filter: 'blur(4px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            exit={{ opacity: 0, y: -12, filter: 'blur(4px)' }}
+            transition={{ duration: 0.35, ease: 'easeInOut' }}
+          >
+            {titles[index].text}
+          </motion.span>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
+
 
 export default function Hero() {
   return (
@@ -46,18 +95,9 @@ export default function Hero() {
               </span>
             </motion.h1>
 
-            <motion.p
-              className="text-gray-700 dark:text-slate-300 text-lg sm:text-xl leading-relaxed mb-4 font-medium"
-              {...fadeUp(0.3)}
-            >
-              <span className="flex flex-wrap gap-x-2 gap-y-1 items-center">
-                <span>CSE Student</span>
-                <span className="text-amber-500">·</span>
-                <span>Full Stack Web Developer</span>
-                <span className="text-amber-500">·</span>
-                <span>Passionate Educator</span>
-              </span>
-            </motion.p>
+            <motion.div className="mb-4 h-8 flex items-center" {...fadeUp(0.3)}>
+              <AnimatedTitle />
+            </motion.div>
 
             <motion.p className="text-gray-500 dark:text-slate-400 text-base leading-relaxed mb-8 max-w-lg" {...fadeUp(0.35)}>
               {profile.heroDescription}
@@ -117,29 +157,53 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.15 }}
           >
-            <div className="relative">
-              {/* Floating stat cards */}
+            <div className="relative px-10 sm:px-14">
+              {/* Floating stat cards — hidden on xs, visible from sm */}
               <motion.div
-                className="absolute -left-14 top-12 z-10 bg-white/95 dark:bg-[#111]/90 backdrop-blur border border-amber-500/25 rounded-2xl px-4 py-3 shadow-xl"
+                className="hidden sm:block absolute -left-2 sm:-left-14 top-12 z-10 bg-white/95 dark:bg-[#111]/90 backdrop-blur border border-amber-500/25 rounded-2xl px-3 py-2 sm:px-4 sm:py-3 shadow-xl"
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               >
-                <div className="text-amber-600 dark:text-amber-400 font-bold text-lg font-display">6+</div>
+                <div className="text-amber-600 dark:text-amber-400 font-bold text-base sm:text-lg font-display">6+</div>
                 <div className="text-gray-500 dark:text-slate-400 text-xs">Years Teaching</div>
               </motion.div>
 
+              <motion.div
+                className="hidden sm:block absolute -right-2 sm:-right-12 top-20 z-10 bg-white/95 dark:bg-[#111]/90 backdrop-blur border border-amber-500/25 rounded-2xl px-3 py-2 sm:px-4 sm:py-3 shadow-xl"
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+              >
+                <div className="text-amber-600 dark:text-amber-400 font-bold text-base sm:text-lg font-display">CSE</div>
+                <div className="text-gray-500 dark:text-slate-400 text-xs">at BRUR</div>
+              </motion.div>
 
               <motion.div
-                className="absolute -left-10 bottom-16 z-10 bg-white/95 dark:bg-[#111]/90 backdrop-blur border border-emerald-500/25 rounded-2xl px-4 py-3 shadow-xl"
+                className="hidden sm:block absolute -left-2 sm:-left-10 bottom-16 z-10 bg-white/95 dark:bg-[#111]/90 backdrop-blur border border-emerald-500/25 rounded-2xl px-3 py-2 sm:px-4 sm:py-3 shadow-xl"
                 animate={{ y: [0, 6, 0] }}
                 transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
               >
-                <div className="text-emerald-600 dark:text-emerald-400 font-bold text-xs font-display">Quick Learner</div>
-                <div className="text-gray-500 dark:text-slate-400 text-xs">Learning ML&AI</div>
+                <div className="text-emerald-600 dark:text-emerald-400 font-bold text-xs font-display">Thesis Writing </div>
+                <div className="text-gray-500 dark:text-slate-400 text-xs">learning With ML/AI</div>
               </motion.div>
 
-{/* Profile slideshow container */}
-              <div className="relative w-72 h-72 sm:w-80 sm:h-80 xl:w-96 xl:h-96">
+              {/* Mobile-only stat row */}
+              <div className="flex sm:hidden justify-center gap-3 mb-4">
+                <div className="bg-white/90 dark:bg-[#111]/90 border border-amber-500/25 rounded-xl px-3 py-2 text-center">
+                  <div className="text-amber-600 dark:text-amber-400 font-bold text-base font-display">6+</div>
+                  <div className="text-gray-500 dark:text-slate-400 text-xs">Teaching</div>
+                </div>
+                <div className="bg-white/90 dark:bg-[#111]/90 border border-amber-500/25 rounded-xl px-3 py-2 text-center">
+                  <div className="text-amber-600 dark:text-amber-400 font-bold text-base font-display">3.47</div>
+                  <div className="text-gray-500 dark:text-slate-400 text-xs">CGPA</div>
+                </div>
+                <div className="bg-white/90 dark:bg-[#111]/90 border border-emerald-500/25 rounded-xl px-3 py-2 text-center">
+                  <div className="text-emerald-600 dark:text-emerald-400 font-bold text-xs font-display">🥈 2024</div>
+                  <div className="text-gray-500 dark:text-slate-400 text-xs">Runner-up</div>
+                </div>
+              </div>
+
+              {/* Profile slideshow container */}
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 xl:w-96 xl:h-96">
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-amber-500/30 to-amber-700/10 blur-xl" />
                 <HeroSlideshow />
               </div>

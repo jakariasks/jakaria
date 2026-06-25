@@ -13,15 +13,17 @@
     html { scroll-behavior: auto; }
     .no-print { display: none !important; }
   }
-  html {
+html {
     scroll-behavior: smooth;
     scroll-padding-top: 72px;
+    overflow-x: hidden;
   }
 
- body {
+  body {
     font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     font-size: 16px;
+    overflow-x: hidden;
   }
 
   ::-webkit-scrollbar {
