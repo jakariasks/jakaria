@@ -190,15 +190,15 @@ export default function Hero() {
               <div className="flex sm:hidden justify-center gap-3 mb-4">
                 <div className="bg-white/90 dark:bg-[#111]/90 border border-amber-500/25 rounded-xl px-3 py-2 text-center">
                   <div className="text-amber-600 dark:text-amber-400 font-bold text-base font-display">6+</div>
-                  <div className="text-gray-500 dark:text-slate-400 text-xs">Teaching</div>
+                  <div className="text-gray-500 dark:text-slate-400 text-xs">Years of Teaching</div>
                 </div>
                 <div className="bg-white/90 dark:bg-[#111]/90 border border-amber-500/25 rounded-xl px-3 py-2 text-center">
-                  <div className="text-amber-600 dark:text-amber-400 font-bold text-base font-display">3.47</div>
+                  <div className="text-amber-600 dark:text-amber-400 font-bold text-base font-display">3.57</div>
                   <div className="text-gray-500 dark:text-slate-400 text-xs">CGPA</div>
                 </div>
                 <div className="bg-white/90 dark:bg-[#111]/90 border border-emerald-500/25 rounded-xl px-3 py-2 text-center">
-                  <div className="text-emerald-600 dark:text-emerald-400 font-bold text-xs font-display">🥈 2024</div>
-                  <div className="text-gray-500 dark:text-slate-400 text-xs">Runner-up</div>
+                  <div className="text-emerald-600 dark:text-emerald-400 font-bold text-xs font-display">Learnign ML AI </div>
+                  <div className="text-gray-500 dark:text-slate-400 text-xs">For Research and Thesis</div>
                 </div>
               </div>
 
