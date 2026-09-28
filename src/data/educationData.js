@@ -4,7 +4,7 @@ export const education = [
     degree: 'B.Sc. Eng. in Computer Science and Engineering (CSE) (Honors)',
     institution: 'Begum Rokeya University, Rangpur (BRUR) ',
     duration: '2022 – Present',
-    result: 'CGPA 3.57 (out of 4.00) - 3rd Year',
+    result: 'CGPA 3.70 (out of 4.00) - 3rd Year',
     courses: [
       'Data Structures', 'Advanced Algorithms', 'DBMS', 'OOP', 'Web Development',
       'Computer Architecture', 'Computer Networking', 'Microprocessor & Microcontroller', 'Software Engineering', 'Operating Systems', 'Artificial Intelligence',
